@@ -1,8 +1,8 @@
 {
 	"name": "react-address-lookup",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"description": "An address lookup React component.",
-	"main": "index.js",
+	"main": "dist/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"storybook": "start-storybook -p 6006",
@@ -11,10 +11,13 @@
 	},
 	"author": "Tom Stanley",
 	"license": "ISC",
+	"browserslist": "> 0.25%, not dead",
 	"dependencies": {},
 	"devDependencies": {
 		"@babel/cli": "^7.6.4",
 		"@babel/core": "^7.6.4",
+		"@babel/preset-env": "^7.6.3",
+		"@babel/preset-react": "^7.6.3",
 		"@storybook/addon-actions": "^5.2.5",
 		"@storybook/addon-links": "^5.2.5",
 		"@storybook/addons": "^5.2.5",
@@ -25,5 +28,12 @@
 	"peerDependencies": {
 		"react": "^16.8.6",
 		"react-dom": "^16.8.6"
+	},
+	"babel": {
+		"presets": [
+			"@babel/preset-react",
+			"@babel/preset-env",
+			"minify"
+		]
 	}
 }
