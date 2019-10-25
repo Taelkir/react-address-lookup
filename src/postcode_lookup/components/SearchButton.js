@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class SearchButton extends Component {
 	render() {
@@ -9,3 +10,7 @@ export default class SearchButton extends Component {
 		);
 	}
 }
+
+SearchButton.propTypes = {
+	search: PropTypes.func.isRequired,
+};

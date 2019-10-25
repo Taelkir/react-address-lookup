@@ -13,7 +13,9 @@
 	"author": "Tom Stanley",
 	"license": "ISC",
 	"browserslist": "> 0.25%, not dead",
-	"dependencies": {},
+	"dependencies": {
+		"prop-types": "^15.7.2"
+	},
 	"devDependencies": {
 		"@babel/cli": "^7.6.4",
 		"@babel/core": "^7.6.4",

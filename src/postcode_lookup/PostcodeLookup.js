@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import InputField from "./components/InputField";
 import SearchButton from "./components/SearchButton";
 import ResultsSelect from "./components/ResultsSelect";
+import PropTypes from "prop-types";
 
 export default class PostcodeLookup extends Component {
 	state = {
@@ -17,7 +18,7 @@ export default class PostcodeLookup extends Component {
 	search = e => {
 		this.setState({ loading: true });
 		fetch(
-			"https://ws.postcoder.com/pcw/PCW45-12345-12345-1234X/address/UK/NR14%207PZ?format=json&lines=2&identifier=React%20Component"
+			`https://ws.postcoder.com/pcw/${this.props.apiKey}/address/UK/NR14%207PZ?format=json&lines=2&identifier=React%20Component`
 		)
 			.then(response => {
 				return response.json();
@@ -38,7 +39,10 @@ export default class PostcodeLookup extends Component {
 	render() {
 		return (
 			<div>
-				<InputField updateInput={this.updateInput} />
+				<InputField
+					updateInput={this.updateInput}
+					placeholder={this.props.placeholder}
+				/>
 				<SearchButton search={this.search} />
 				{this.state.loading ? <p>Loading...</p> : ""}
 				<ResultsSelect data={this.state.data} />
@@ -46,3 +50,7 @@ export default class PostcodeLookup extends Component {
 		);
 	}
 }
+PostcodeLookup.propTypes = {
+	apiKey: PropTypes.string.isRequired,
+	placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+};

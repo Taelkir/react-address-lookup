@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export default class ResultsSelect extends Component {
 	render() {
@@ -11,3 +12,6 @@ export default class ResultsSelect extends Component {
 		);
 	}
 }
+ResultsSelect.propTypes = {
+	data: PropTypes.array,
+};
