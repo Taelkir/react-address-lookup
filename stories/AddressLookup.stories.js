@@ -1,20 +1,17 @@
 import React from "react";
 
-import PostcodeLookup from "../src/index";
+import Postcoder from "../src/index";
 
 export default {
 	title: "Lookup",
 };
 
-export const SearchByPostcodeNoPlaceHolder = () => (
-	<PostcodeLookup noplaceholder />
-);
-
-SearchByPostcodeNoPlaceHolder.story = {
-	name: "Search by postcode; no placeholder",
+export const SearchByPostcode = () => <Postcoder />;
+SearchByPostcode.story = {
+	name: "0 - Default search by postcode",
 };
 
-export const SearchByPostcode = () => <PostcodeLookup />;
-SearchByPostcode.story = {
-	name: "Search by postcode",
+export const SearchByPostcodeNoPlaceHolder = () => <Postcoder noplaceholder />;
+SearchByPostcodeNoPlaceHolder.story = {
+	name: "1 - Search by postcode; no placeholder",
 };

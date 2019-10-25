@@ -1,8 +1,9 @@
 import React from "react";
+import PostcodeLookup from "./postcode_lookup/PostcodeLookup";
 import "./style.css";
 
-const PostcodeLookup = props => {
-	return <input placeholder={props.noplaceholder ? "" : "e.g. NR14 7PZ"} />;
+const Postcoder = () => {
+	return <PostcodeLookup />;
 };
 
-export default PostcodeLookup;
+export default Postcoder;
