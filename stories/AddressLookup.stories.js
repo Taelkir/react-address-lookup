@@ -8,6 +8,9 @@ export default {
 
 const defaultProps = {
 	apiKey: "PCW45-12345-12345-1234X",
+	addressSelectedCallback: function(addrObj) {
+		console.log(addrObj);
+	},
 };
 
 export const SearchByPostcode = () => <Postcoder {...defaultProps} />;

@@ -10,6 +10,7 @@ const Postcoder = props => {
 Postcoder.propTypes = {
 	placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 	apiKey: PropTypes.string.isRequired,
+	addressSelectedCallback: PropTypes.func.isRequired,
 };
 
 export default Postcoder;

@@ -45,7 +45,10 @@ export default class PostcodeLookup extends Component {
 				/>
 				<SearchButton search={this.search} />
 				{this.state.loading ? <p>Loading...</p> : ""}
-				<ResultsSelect data={this.state.data} />
+				<ResultsSelect
+					data={this.state.data}
+					addressSelectedCallback={this.props.addressSelectedCallback}
+				/>
 			</div>
 		);
 	}
