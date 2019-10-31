@@ -8,7 +8,7 @@ export default class PostcodeLookup extends Component {
 	state = {
 		input: "",
 		loading: false,
-		data: [{ summaryline: "Search for an address" }],
+		data: [],
 	};
 
 	updateInput = e => {
@@ -45,10 +45,14 @@ export default class PostcodeLookup extends Component {
 				/>
 				<SearchButton search={this.search} />
 				{this.state.loading ? <p>Loading...</p> : ""}
-				<ResultsSelect
-					data={this.state.data}
-					addressSelectedCallback={this.props.addressSelectedCallback}
-				/>
+				{this.state.data.length > 0 ? (
+					<ResultsSelect
+						data={this.state.data}
+						addressSelectedCallback={this.props.addressSelectedCallback}
+					/>
+				) : (
+					""
+				)}
 			</div>
 		);
 	}
