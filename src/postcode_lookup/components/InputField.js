@@ -18,8 +18,11 @@ export default class InputField extends Component {
 	render() {
 		return (
 			<>
-				<label for={this.state.inputId}>{this.props.labelText}</label>
+				<label className="address-lookup-label" htmlFor={this.state.inputId}>
+					{this.props.labelText}
+				</label>
 				<input
+					className="address-lookup-input"
 					placeholder={this.placeholder()}
 					onChange={this.props.updateInput}
 					id={this.state.inputId}

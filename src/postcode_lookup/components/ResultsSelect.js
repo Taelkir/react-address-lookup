@@ -10,10 +10,14 @@ export default class ResultsSelect extends Component {
 
 	render() {
 		return (
-			<select style={{ display: "block" }} onChange={this.handleSelect}>
+			<select
+				className="address-lookup-select"
+				style={{ display: "block" }}
+				onChange={this.handleSelect}
+			>
 				{this.props.data.map((address, index) => {
 					return (
-						<option key={index} value={index}>
+						<option className="address-lookup-option" key={index} value={index}>
 							{address.summaryline}
 						</option>
 					);

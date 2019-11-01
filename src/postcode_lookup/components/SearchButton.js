@@ -4,7 +4,11 @@ import PropTypes from "prop-types";
 export default class SearchButton extends Component {
 	render() {
 		return (
-			<button type="button" onClick={this.props.search}>
+			<button
+				className="address-lookup-search-button"
+				type="button"
+				onClick={this.props.search}
+			>
 				Search
 			</button>
 		);

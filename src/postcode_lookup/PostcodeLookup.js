@@ -39,7 +39,7 @@ export default class PostcodeLookup extends Component {
 
 	render() {
 		return (
-			<div>
+			<div className="address-lookup-wrapper">
 				<InputField
 					updateInput={this.updateInput}
 					placeholder={this.props.placeholder}

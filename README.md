@@ -35,6 +35,15 @@ export default class AddressLookup extends Component {
 		);
 	}
 }
-
-
 ```
+
+## Styling
+
+The component provides the following classes that can be targeted for styling:
+
+- `address-lookup-wrapper` : Targets the `<div>` that wraps the rest of the component.
+- `address-lookup-select` : Targets the `<select>` element that displays address results.
+- `address-lookup-option` : Targets the `<option>` elements within the select element.
+- `address-lookup-search-button` : Targets the `<button>` used to fire off the search.
+- `address-lookup-label` : Targets the `<label>` element linked to the input.
+- `address-lookup-input` : Targets the `<input>` used to enter a search term.
