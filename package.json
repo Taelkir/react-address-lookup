@@ -1,6 +1,6 @@
 {
 	"name": "react-address-lookup",
-	"version": "0.0.3",
+	"version": "0.0.4",
 	"description": "An address lookup React component.",
 	"main": "dist/index.js",
 	"scripts": {
