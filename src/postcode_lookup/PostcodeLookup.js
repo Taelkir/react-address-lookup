@@ -43,6 +43,7 @@ export default class PostcodeLookup extends Component {
 				<InputField
 					updateInput={this.updateInput}
 					placeholder={this.props.placeholder}
+					labelText={this.props.labelText}
 				/>
 				<SearchButton search={this.search} />
 				{this.state.loading ? <p>Loading...</p> : ""}

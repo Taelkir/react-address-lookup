@@ -39,7 +39,6 @@ const InAForm = () => {
 	return (
 		<form>
 			<legend>Enter your address</legend>
-			<label>Postcode search</label>
 			<Postcoder
 				{...defaultProps()}
 				addressSelectedCallback={addAddressToState}

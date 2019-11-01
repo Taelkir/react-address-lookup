@@ -11,6 +11,7 @@ Postcoder.propTypes = {
 	placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
 	apiKey: PropTypes.string.isRequired,
 	addressSelectedCallback: PropTypes.func.isRequired,
+	labelText: PropTypes.string,
 };
 
 export default Postcoder;

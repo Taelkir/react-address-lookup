@@ -14,6 +14,7 @@
 	"license": "ISC",
 	"browserslist": "> 0.25%, not dead",
 	"dependencies": {
+		"lodash.uniqueid": "^4.0.1",
 		"prop-types": "^15.7.2"
 	},
 	"devDependencies": {
