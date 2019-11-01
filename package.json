@@ -1,6 +1,6 @@
 {
 	"name": "react-address-lookup",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "An address lookup React component.",
 	"main": "dist/index.js",
 	"scripts": {
@@ -20,6 +20,7 @@
 	"devDependencies": {
 		"@babel/cli": "^7.6.4",
 		"@babel/core": "^7.6.4",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
 		"@babel/preset-env": "^7.6.3",
 		"@babel/preset-react": "^7.6.3",
 		"@storybook/addon-actions": "^5.2.5",
@@ -39,6 +40,14 @@
 			"@babel/preset-react",
 			"@babel/preset-env",
 			"minify"
+		],
+		"plugins": [
+			[
+				"@babel/plugin-proposal-class-properties",
+				{
+					"loose": true
+				}
+			]
 		]
 	}
 }
