@@ -1,33 +1,30 @@
 import React, { useState } from "react";
+import { storiesOf } from "@storybook/react";
+import { withKnobs, text } from "@storybook/addon-knobs";
 
 import Postcoder from "../src/index";
 
-export default {
-	title: "Lookup",
+const stories = storiesOf("Lookup", module).addDecorator(withKnobs);
+
+const defaultProps = () => {
+	const props = {
+		apiKey: text("API_Key", "PCW45-12345-12345-1234X"),
+		addressSelectedCallback: function(addrObj) {
+			alert(JSON.stringify(addrObj));
+		},
+	};
+	return props;
 };
 
-const defaultProps = {
-	apiKey: "PCW45-12345-12345-1234X",
-	addressSelectedCallback: function(addrObj) {
-		console.log(addrObj);
-	},
-};
+const SearchByPostcode = () => <Postcoder {...defaultProps()} />;
 
-export const SearchByPostcode = () => <Postcoder {...defaultProps} />;
-SearchByPostcode.story = {
-	name: "0 - Default search by postcode",
-};
-
-export const SearchByPostcodeNoPlaceHolder = () => (
+const SearchByPostcodeNoPlaceHolder = () => (
 	<>
-		<Postcoder {...defaultProps} placeholder={false} />
+		<Postcoder {...defaultProps()} placeholder={false} />
 	</>
 );
-SearchByPostcodeNoPlaceHolder.story = {
-	name: "1 - Search by postcode; no placeholder",
-};
 
-export const InAForm = () => {
+const InAForm = () => {
 	const [storedAddress, setAddress] = useState({
 		addressline1: "",
 		addressline2: "",
@@ -44,7 +41,7 @@ export const InAForm = () => {
 			<legend>Enter your address</legend>
 			<label>Postcode search</label>
 			<Postcoder
-				{...defaultProps}
+				{...defaultProps()}
 				addressSelectedCallback={addAddressToState}
 			/>
 			<hr />
@@ -83,6 +80,6 @@ export const InAForm = () => {
 	);
 };
 
-InAForm.story = {
-	name: "3 - In situ within a form",
-};
+stories.add("In situ within a form", InAForm);
+stories.add("Default search by postcode", SearchByPostcode);
+stories.add("No placeholder", SearchByPostcodeNoPlaceHolder);
