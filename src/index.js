@@ -1,8 +1,17 @@
 import React from "react";
+import PostcodeLookup from "./postcode_lookup/PostcodeLookup";
 import "./style.css";
+import PropTypes from "prop-types";
 
-const PostcodeLookup = props => {
-	return <input placeholder={props.noplaceholder ? "" : "e.g. NR14 7PZ"} />;
+const Postcoder = props => {
+	return <PostcodeLookup {...props} />;
 };
 
-export default PostcodeLookup;
+Postcoder.propTypes = {
+	placeholder: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
+	apiKey: PropTypes.string.isRequired,
+	addressSelectedCallback: PropTypes.func.isRequired,
+	labelText: PropTypes.string,
+};
+
+export default Postcoder;

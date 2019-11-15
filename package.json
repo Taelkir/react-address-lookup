@@ -1,9 +1,10 @@
 {
 	"name": "react-address-lookup",
-	"version": "0.0.2",
+	"version": "0.0.4",
 	"description": "An address lookup React component.",
 	"main": "dist/index.js",
 	"scripts": {
+		"start": "npm run storybook",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"storybook": "start-storybook -p 6006",
 		"build-storybook": "build-storybook",
@@ -13,13 +14,18 @@
 	"author": "Tom Stanley",
 	"license": "ISC",
 	"browserslist": "> 0.25%, not dead",
-	"dependencies": {},
+	"dependencies": {
+		"lodash.uniqueid": "^4.0.1",
+		"prop-types": "^15.7.2"
+	},
 	"devDependencies": {
 		"@babel/cli": "^7.6.4",
 		"@babel/core": "^7.6.4",
+		"@babel/plugin-proposal-class-properties": "^7.5.5",
 		"@babel/preset-env": "^7.6.3",
 		"@babel/preset-react": "^7.6.3",
 		"@storybook/addon-actions": "^5.2.5",
+		"@storybook/addon-knobs": "^5.2.5",
 		"@storybook/addon-links": "^5.2.5",
 		"@storybook/addons": "^5.2.5",
 		"@storybook/react": "^5.2.5",
@@ -35,6 +41,14 @@
 			"@babel/preset-react",
 			"@babel/preset-env",
 			"minify"
+		],
+		"plugins": [
+			[
+				"@babel/plugin-proposal-class-properties",
+				{
+					"loose": true
+				}
+			]
 		]
 	}
 }
