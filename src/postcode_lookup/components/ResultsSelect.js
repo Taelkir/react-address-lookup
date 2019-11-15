@@ -15,6 +15,9 @@ export default class ResultsSelect extends Component {
 				style={{ display: "block" }}
 				onChange={this.handleSelect}
 			>
+				<option value="null" selected disabled>
+					Select an address...
+				</option>
 				{this.props.data.map((address, index) => {
 					return (
 						<option className="address-lookup-option" key={index} value={index}>
