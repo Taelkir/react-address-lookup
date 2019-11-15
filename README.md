@@ -1,6 +1,6 @@
 # React-Address-Lookup
 
-An in-development React component for looking up addresses.
+An React component for looking up addresses.
 
 Requires a Postcoder API Key. Sign up for a free one at https://postcoder.com
 
