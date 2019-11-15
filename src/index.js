@@ -12,6 +12,7 @@ Postcoder.propTypes = {
 	apiKey: PropTypes.string.isRequired,
 	addressSelectedCallback: PropTypes.func.isRequired,
 	labelText: PropTypes.string,
+	country: PropTypes.string,
 };
 
 export default Postcoder;

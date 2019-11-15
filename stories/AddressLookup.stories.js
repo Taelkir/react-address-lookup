@@ -9,9 +9,11 @@ const stories = storiesOf("Lookup", module).addDecorator(withKnobs);
 const defaultProps = () => {
 	const props = {
 		apiKey: text("API_Key", "PCW45-12345-12345-1234X"),
+		country: text("country_iso2", "UK"),
 		addressSelectedCallback: function(addrObj) {
 			alert(JSON.stringify(addrObj));
 		},
+		identifier: "Storybook_Lookup",
 	};
 	return props;
 };

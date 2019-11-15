@@ -16,10 +16,11 @@ export default class PostcodeLookup extends Component {
 	};
 
 	search = e => {
-		let { apiKey, identifier } = this.props;
+		let { apiKey, identifier, country } = this.props;
+		country === "" ? (country = "UK") : (country = country); // defaultProps only works if the prop is absent, not set to an empty string
 		this.setState({ loading: true });
 		fetch(
-			`https://ws.postcoder.com/pcw/${apiKey}/address/UK/${this.state.input}?format=json&lines=2&identifier=${identifier}`
+			`https://ws.postcoder.com/pcw/${apiKey}/address/${country}/${this.state.input}?format=json&lines=2&identifier=${identifier}`
 		)
 			.then(response => {
 				return response.json();
@@ -63,6 +64,7 @@ export default class PostcodeLookup extends Component {
 PostcodeLookup.defaultProps = {
 	apiKey: "PCW45-12345-12345-1234X",
 	identifer: "react-address-lookup",
+	country: "UK",
 };
 PostcodeLookup.propTypes = {
 	apiKey: PropTypes.string,

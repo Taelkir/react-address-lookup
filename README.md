@@ -47,3 +47,7 @@ The component provides the following classes that can be targeted for styling:
 - `address-lookup-search-button` : Targets the `<button>` used to fire off the search.
 - `address-lookup-label` : Targets the `<label>` element linked to the input.
 - `address-lookup-input` : Targets the `<input>` used to enter a search term.
+
+## Fully International
+
+To view a full list of all the countries (and their two character ISO codes) supported by the `country` prop, check here: https://postcoder.com/docs/address-lookup#global-coverage
