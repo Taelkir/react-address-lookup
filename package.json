@@ -11,7 +11,7 @@
 		"prepublishOnly": "babel src -d dist --copy-files"
 	},
 	"author": "Tom Stanley",
-	"license": "ISC",
+	"license": "MIT",
 	"browserslist": "> 0.25%, not dead",
 	"repository": {
 		"type": "git",
