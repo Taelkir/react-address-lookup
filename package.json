@@ -7,8 +7,12 @@
 		"start": "npm run storybook",
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"storybook": "start-storybook -p 6006",
-		"build-storybook": "build-storybook",
-		"prepublishOnly": "babel src -d dist --copy-files"
+		"build-storybook": "build-storybook"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "babel src -d dist --copy-files"
+		}
 	},
 	"author": "Tom Stanley",
 	"license": "MIT",
@@ -33,7 +37,8 @@
 		"@storybook/addons": "^5.2.6",
 		"@storybook/react": "^5.2.5",
 		"babel-loader": "^8.0.6",
-		"babel-preset-minify": "^0.5.1"
+		"babel-preset-minify": "^0.5.1",
+		"husky": "^3.1.0"
 	},
 	"peerDependencies": {
 		"react": "^16.8.6",
