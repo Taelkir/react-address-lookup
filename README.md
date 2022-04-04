@@ -51,3 +51,8 @@ The component provides the following classes that can be targeted for styling:
 ## Fully International
 
 To view a full list of all the countries (and their two character ISO codes) supported by the `country` prop, check here: https://postcoder.com/docs/address-lookup#global-coverage
+
+## Development
+
+1. Run `npm ci` to install node_modules from package-lock.json
+2. Run `npm start` to begin storybook for development
