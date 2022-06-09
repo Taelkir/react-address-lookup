@@ -2,7 +2,7 @@
   "name": "react-address-lookup",
   "version": "2.0.0",
   "description": "An address lookup React component.",
-  "main": "dist/index.js",
+  "main": "dist/postcode_lookup/PostcodeLookup.js",
   "scripts": {
     "start": "npm run storybook",
     "test": "echo \"Error: no test specified\" && exit 1",
