@@ -28,13 +28,16 @@
     "@babel/plugin-proposal-class-properties": "^7.7.0",
     "@babel/preset-env": "^7.7.1",
     "@babel/preset-react": "^7.7.0",
-    "@storybook/addon-actions": "^6.4.20",
+    "@storybook/addon-actions": "^6.5.13",
     "@storybook/addon-knobs": "^6.4.0",
-    "@storybook/addon-links": "^6.4.20",
-    "@storybook/addons": "^6.4.20",
-    "@storybook/react": "^6.4.20",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/addons": "^6.5.13",
+    "@storybook/react": "^6.5.13",
     "babel-loader": "^8.0.6",
-    "babel-preset-minify": "^0.5.1"
+    "babel-preset-minify": "^0.5.1",
+    "html-webpack-plugin": "^5.5.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   },
   "peerDependencies": {
     "react": "^17.0.2",
