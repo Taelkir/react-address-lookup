@@ -49,14 +49,13 @@ export default class PostcodeLookup extends Component {
 					labelText={this.props.labelText}
 				/>
 				<SearchButton search={this.search} />
-				{this.state.loading ? <p>Loading...</p> : ""}
 				{this.state.data.length > 0 ? (
 					<ResultsSelect
 						data={this.state.data}
 						addressSelectedCallback={this.props.addressSelectedCallback}
 					/>
 				) : (
-					""
+					this.state.loading ? <p>Loading...</p> : ""
 				)}
 			</div>
 		);
