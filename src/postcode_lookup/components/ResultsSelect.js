@@ -10,7 +10,7 @@ export default class ResultsSelect extends Component {
 
 	render() {
 		return (
-			<select
+			<select id="address-lookup-select"
 				className="address-lookup-select"
 				style={{ display: "block" }}
 				onChange={this.handleSelect}
